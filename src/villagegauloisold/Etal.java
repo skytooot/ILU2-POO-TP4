@@ -10,27 +10,22 @@ public class Etal<T extends IProduit> implements IEtal {
 	private int quantite;
 	private boolean etalOccupe = false;
 
-	@Override
 	public boolean isEtalOccupe() {
 		return etalOccupe;
 	}
 
-	@Override
 	public Gaulois getVendeur() {
 		return vendeur;
 	}
 
-	@Override
 	public int getQuantite() {
 		return quantite;
 	}
 
-	@Override
 	public IProduit getProduit() {
 		return produit;
 	}
 
-	@Override
 	public void occuperEtal(Gaulois vendeur, IProduit produit, int quantite) {
 		this.vendeur = vendeur;
 		this.produit = (T) produit;
@@ -39,12 +34,10 @@ public class Etal<T extends IProduit> implements IEtal {
 		etalOccupe = true;
 	}
 
-	@Override
 	public boolean contientProduit(String produit) {
 		return this.produit.equals(produit);
 	}
 
-	@Override
 	public int acheterProduit(int quantiteAcheter) {
 		if (quantite == 0) {
 			quantiteAcheter = 0;

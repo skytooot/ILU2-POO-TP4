@@ -6,4 +6,8 @@ public interface IProduit {
 
 	Unite getUnite();
 
+	double calculerPrix(int prix);
+
+	String description();
+
 }
